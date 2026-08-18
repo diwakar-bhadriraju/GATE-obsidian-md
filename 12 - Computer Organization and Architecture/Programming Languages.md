@@ -1,0 +1,81 @@
+---
+title: "Programming Languages Tutorials"
+subject: "Computer Organization and Architecture"
+topic: "I/O interface (Interrupt and DMA mode)"
+source: "https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials/"
+source_site: GeeksforGeeks
+type: gate-cs-note
+topics: "Computer Organization and Architecture/I/O interface (Interrupt and DMA mode)"
+tags:
+  - gate/cs
+  - subject/computer-organization-and-architecture
+  - topic/i/o-interface-interrupt-and-dma-mode
+---
+
+
+> [!abstract] Programming Languages Tutorials
+> 
+> **Subject:** `Computer Organization and Architecture` &nbsp;|&nbsp; **Topic:** `I/O interface (Interrupt and DMA mode)`
+> **Source:** [GeeksforGeeks](https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials/)
+
+---
+
+# Programming Languages Tutorials
+
+Programming languages are how we tell computers what to do. The following are quick links to tutorials of the most common programming languages.
+- [C Language](https://www.geeksforgeeks.org/c/c-programming-language/)
+- [C++](https://www.geeksforgeeks.org/cpp/c-plus-plus/)
+- [Java](https://www.geeksforgeeks.org/java/java/)
+- [Python](https://www.geeksforgeeks.org/python/python-programming-language-tutorial/)
+- [JavaScript](https://www.geeksforgeeks.org/javascript/javascript-tutorial/)
+- [TypeScript](https://www.geeksforgeeks.org/typescript/typescript-tutorial/)
+- [PHP](https://www.geeksforgeeks.org/php/php-tutorial/)
+- [R](https://www.geeksforgeeks.org/r-language/r-programming-language-introduction/)
+- [Ruby](https://www.geeksforgeeks.org/ruby/ruby-programming-language/)
+- [Cuda](https://www.geeksforgeeks.org/cpp/cuda-tutorial/)
+## How to Learn a Programming Language?
+- Pick a language based on your goals (e.g., Python for data science, JavaScript for web development).
+- Understand syntax, variables, data types, control flow, functions, and data structures.
+- Write Code and [Solve Problems](https://www.geeksforgeeks.org/dsa/geeksforgeeks-practice-best-online-coding-platform/).
+- Build Projects
+- Review code examples on GitHub and learn to use official documentation to understand libraries and functions.
+- Join a Community
+- Stay updated with trends in the language.
+- Progress takes time. Keep practicing and stay persistent even when faced with challenges.
+## Applications of Different Programming Languages
+- **C Language** : Used for designing software that work close to hardware and that work in low resource environment (less memory and CPU power) like embedded systems. C is also considered as mother of all languages and used as a first language to be taught in engineering so that students learn fundamentals**.**
+- **C++** : C++ is considered as a superset of C as it supports almost all syntax of C with additional features like Object Oriented Programming, Generic Programming and Exception Handling. C++ also has richer library and has wider applications compared to C. Both C and C++ are considered as faster languages compared to other popular programming languages like Java, Python and JavaScrip**t.**
+- **Java :** Java is a high-level, object-oriented programming language known for its platform independence, thanks to the Java Virtual Machine (JVM). It is widely used in enterprise-level applications, mobile development (especially Android apps) and large systems. Java is popular for its robustness, security features and scalability, making it a go-to choice for building reliable and high-performance systems.
+- **Python:** Python is a high-level, interpreted language known for its simplicity and readability. It's widely used for rapid application development, scripting, data analysis, artificial intelligence and web development. Python has an extensive collection of libraries and frameworks, making it versatile for various applications.
+- **JavaScript:** JavaScript is a dynamic, interpreted language that is primarily used for building interactive and dynamic websites. Initially designed for web development, JavaScript now has wide applications through frameworks and libraries such as Node.js, React and Angular. It runs in browsers, making it essential for client-side scripting.
+- **R:** R is a programming language and environment specifically designed for statistical computing and data analysis. It is widely used by statisticians, data scientists and researchers for analyzing and visualizing large datasets. R has a rich set of libraries and tools for data manipulation, statistical modeling and visualization, making it ideal for tasks such as machine learning, data analysis and data visualization.
+- **PHP:** PHP is a server-side, scripting language mainly used for web development. It is widely used to create dynamic web pages and web applications. Known for its deep integration with HTML and database management systems like MySQL, PHP powers a significant portion of the web, including popular content management systems like WordPress.
+- **Swift:** Swift is a powerful, high-level language developed by Apple for creating applications for iOS, macOS, watchOS and tvOS. It is known for its clean syntax, safety features and high performance. Swift is intended to be an easier and safer alternative to Objective-C for iOS and macOS development.
+- [**Kotlin**](https://www.geeksforgeeks.org/kotlin/kotlin-programming-language/)**:** Kotlin is a modern, statically typed language that runs on the Java Virtual Machine (JVM). It is fully interoperable with Java but provides more concise syntax and additional features, such as null safety, which helps avoid common programming errors. Kotlin is officially supported for Android development and is becoming increasingly popular due to its enhanced developer productivity and safety features.
+- [**Rust**](https://www.geeksforgeeks.org/rust/introduction-to-rust-programming-language/)**:** Rust is a systems programming language focused on safety, speed and concurrency. It’s designed to prevent memory safety issues like null pointer dereferencing and buffer overflows, which are common in languages like C and C++. Rust is particularly popular for developing high-performance, memory-efficient applications, such as operating systems, game engines and blockchain systems.
+- **TypeScript:** TypeScript is a superset of JavaScript that adds static typing, making it easier to catch errors during development. It compiles down to plain JavaScript, ensuring compatibility with existing JavaScript libraries and frameworks. TypeScript is widely used in large-scale web applications, as its type system helps with maintainability and scalability.
+- **Ruby:** Ruby is a high-level, interpreted language known for its elegant and readable syntax. It is primarily used for web development, with Ruby on Rails being its most well-known framework for building scalable, dynamic websites. Ruby emphasizes simplicity and productivity, allowing developers to build web applications quickly. Its dynamic typing and flexible syntax make it a popular choice for startups and rapid application development.
+- **CUDA:** CUDA (Compute Unified Device Architecture) is a parallel computing platform developed by NVIDIA that enables developers to use GPUs for high-performance computing. It allows thousands of threads to run simultaneously, making it ideal for tasks like machine learning, scientific simulations and image processing. CUDA is commonly used with C/C++ and Python to accelerate compute-intensive applications using NVIDIA GPUs.
+---
+
+## Source
+
+[GeeksforGeeks](https://www.geeksforgeeks.org/computer-science-fundamentals/programming-language-tutorials/)
+
+## GATE CS
+
+- Subject: Computer Organization and Architecture
+- Topic: I/O interface (Interrupt and DMA mode)
+
+> [!note] Related notes
+>
+> - [[AI, ML & Data Science]]
+> - [[Aptitude]]
+> - [[Asynchronous input output synchronization]]
+> - [[BUS Arbitration]]
+> - [[CATEGORY ARCHIVES DATA STRUCTURES]]
+> - [[Clusters In Computer Organisation]]
+> - [[Computer Ports]]
+> - [[Connect]]
+> - [[Corporate Solution]]
+> - [[CS Core Subjects]]

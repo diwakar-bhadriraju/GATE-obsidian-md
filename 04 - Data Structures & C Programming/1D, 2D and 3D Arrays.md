@@ -1,0 +1,224 @@
+---
+title: "Multidimensional Arrays in C - 2D and 3D Arrays"
+subject: "Data Structures & C Programming"
+topic: "Arrays"
+source: "https://www.geeksforgeeks.org/multidimensional-arrays-in-c/"
+source_site: GeeksforGeeks
+type: gate-cs-note
+topics: "Data Structures & C Programming/Arrays"
+tags:
+  - gate/cs
+  - subject/data-structures-c-programming
+  - topic/arrays
+---
+
+
+> [!abstract] Multidimensional Arrays in C - 2D and 3D Arrays
+> 
+> **Subject:** `Data Structures & C Programming` &nbsp;|&nbsp; **Topic:** `Arrays`
+> **Source:** [GeeksforGeeks](https://www.geeksforgeeks.org/multidimensional-arrays-in-c/)
+
+---
+
+# Multidimensional Arrays in C - 2D and 3D Arrays
+
+A multidimensional array is an array with more than one dimension, allowing data to be stored in multiple directions. The most common multidimensional arrays in C are 2-D and 3-D arrays.
+- A 2-D array stores data in rows and columns, making it suitable for tables and matrices.
+- A 3-D array stores data in depth, rows, and columns, making it useful for representing layered or volumetric data.
+````c
+#include <stdio.h>
+int main() {
+    /*
+       Declare and initialize a 2×2 integer array.
+       arr[0][0] = 10, arr[0][1] = 20,
+       arr[1][0] = 30, arr[1][1] = 40
+    */
+    int arr[2][2] = { {10, 20}, {30, 40} };
+    printf("2D Array Elements:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+````
+### Syntax
+> type arrName[size1][size2]....[sizeN];
+Thegeneral form of declaring N-dimensional arrays is shown below
+- **type**: Type of data to be stored in the array.
+- **arrName**: Name assigned to the array.
+- **size1, size2,..., sizeN**: Size of each dimension.
+## Size of Multidimensional Arrays
+The total number of elements in a multidimensional array is obtained by multiplying the size of all its dimensions. The total memory occupied is the number of elements multiplied by the size of one element.
+- For int arr[10][20], the total number of elements is 10 × 20 = 200.
+- If the size of int is 4 bytes, the total size of the array is 10 × 20 × 4 = 800 bytes.
+## Types of Multidimensional Arrays
+In C, there can be many types of arrays depending on their dimensions but two of them are most commonly used
+### 1. 2D Arrays in C
+A two-dimensional (2-D) array is the simplest type of multidimensional array that stores data in rows and columns. It can be viewed as multiple one-dimensional arrays arranged in a table.
+- If a 2-D array has m rows and n columns, the row indices range from 0 to m−1 and the column indices range from 0 to n−1.
+- In C, array indexing starts from 0, so both rows and columns are accessed using 0-based indexing.
+![2d-array-in-c](assets/2d-array-in-c-db8e7c4b2f.webp)
+**Declaration of 2D Array**
+A 2D array with **m** rows and **n** columns can be created as:
+> type arr\_name[m][n];
+For example, we can declare a two-dimensional integer array with name **'arr'** with 10 rows and 20 columns as:
+> int arr[10][20];
+**Initialization of 2D Arrays**
+We can [**initialize a 2D array**](https://www.geeksforgeeks.org/c/how-to-initialize-2d-array-in-c/) by using a list of values enclosed inside '{ }' and separated by a comma as shown in the example below:
+> int arr[3][4] = {0, 1 ,2 ,3 ,4 , 5 , 6 , 7 , 8 , 9 , 10 , 11};
+>
+> or
+>
+> int arr[3][4] = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}};
+**Explanation**
+- During initialization, elements are filled row by row from left to right and top to bottom, with each inner brace representing one row.
+- When using list initialization, the row size can be omitted, and the compiler automatically determines it from the number of rows provided.
+> type arr\_name[][n] = {...values...};
+It is still compulsory to define the number of columns.
+> **Note:** The number of elements in initializer list should always be either less than or equal to the total number of elements in the array.
+**Accessing Elements**
+An element in two-dimensional array is accessed using row indexes and column indexes inside array subscript [**operator []**](https://www.geeksforgeeks.org/cpp/overloading-subscript-or-array-index-operator-in-c/).
+> arr\_name[i][j]
+**2D Array Traversal**
+Traversal of a 2-D array means accessing every element one by one. It is done using nested loops, where the outer loop traverses rows and the inner loop traverses columns.
+````c
+for(int i = 0; i < row; i++){
+    for(int j = 0; j < col; j++){
+        arr[i][j];
+    }
+}
+````
+The below example demonstrates the row-by-row traversal of a 2D array.
+````c
+#include <stdio.h>
+int main() {
+    // Create and initialize an array with 3 rows
+  	// and 2 columns
+    int arr[3][2] = { { 0, 1 }, { 2, 3 }, { 4, 5 } };
+    // Print each array element's value
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            printf("arr[%d][%d]: %d    ", i, j, arr[i][j]);
+        }
+      	printf("\n");
+    }
+    return 0;
+}
+````
+**Output**
+```
+arr[0][0]: 0    arr[0][1]: 1
+arr[1][0]: 2    arr[1][1]: 3
+arr[2][0]: 4    arr[2][1]: 5
+```
+**How 2D Arrays are Stored in the Memory?**
+A 2-D array is stored in contiguous memory locations. Since computer memory is linear, the array is stored in a linear form using either row-major or column-major order.
+- **Row-major order:** Stores all elements of one row first, then the next row. (Used by **C**)
+- **Column-major order:** Stores all elements of one column first, then the next column.
+- The computer stores only the base address of the array and calculates the address of any element using that base address, enabling efficient random access.
+**Passing 2D Arrays to Functions**
+[**Passing 2D arrays to functions**](https://www.geeksforgeeks.org/c/pass-2d-array-parameter-c/) need a specialized syntax so that the function knows that the data being passed is 2d array. The function signature that takes 2D array as argument is shown below:
+### 2. 3D Array in C
+A Three-Dimensional Array or 3D array in C is a collection of two-dimensional arrays. It can be visualized as multiple 2D arrays stacked on top of each other.
+![3d-array-in-c](assets/3d-array-in-c-acd8a145f1.webp)
+**Declaration of 3D Array in C**
+We can declare a 3D array with **x** 2D arrays each having **m** rows and **n** columns using the syntax shown below:
+> type arr\_name[x][m][n];
+For example, we can declare 3d array, which is made by 2-2D array and each 2D array have 2 rows and 2 columns:
+> int arr[2][2][2];
+**Initialization of 3D Array in C**
+[**Initialization in a 3D array**](https://www.geeksforgeeks.org/c/how-to-initialize-a-3d-array-in-c/) is the same as that of 2D arrays. The difference is as the number of dimensions increases so the number of nested braces will also increase.
+> int arr[2][3][2] = {0, 1, 2, 3, 4, 5, 6, 7 , 8, 9, 10, 11};
+>
+> or
+>
+> int arr[2][3][2] = { { { 1, 1 }, { 2, 3 }, { 4, 5 } },
+>
+> { { 6, 7 }, { 8, 9 }, { 10, 11 } } };
+When initializing a 3-D array with an initializer list, the size of the first dimension can be omitted because the compiler automatically determines it. However, the sizes of the remaining dimensions must still be specified.
+> arr [][2][2] = {...Values...};
+**Accessing Elements**
+To access elements in 3D array, we use three indexes. One for depth, one for row and one for column inside subscript operator [].
+> arr\_name[d][i][j]
+where, d, i and j are the indexes for depth (representing a specific 2D array.), the row within that 2D array, and the column within that 2D array respectively.
+**3D Array Traversal**
+Traversing a 3-D array requires three nested loops: the outer loop traverses the depth, the middle loop traverses the rows, and the inner loop traverses the columns (elements).
+````c
+for(int d = 0; d < depth; d++){
+    for(int i = 0; i < row; i++){
+        for(int j = 0; j < col; j++){
+            arr[d][i][j];
+        }
+    }
+}
+````
+Let's take a simple example to demonstrate all the concepts we discussed about 3D arrays:
+````c
+#include <stdio.h>
+int main() {
+    // Create and Initialize the
+    // 3-dimensional array
+    int arr[2][3][2] = { { { 1, 1 }, { 2, 3 },
+                       { 4, 5 } }, { { 6, 7 },
+                       { 8, 9 }, { 10, 11 } } };
+  	// Loop through the depth
+    for (int i = 0; i < 2; ++i) {
+      	// Loop through the
+      	// rows of each depth
+        for (int j = 0; j < 3; ++j) {
+          	// Loop through the
+          	// columns of each row
+            for (int k = 0; k < 2; ++k)
+                printf("arr[%i][%i][%i] = %d   ", i, j, k,
+                       arr[i][j][k]);
+          	printf("\n");
+        }
+      printf("\n\n");
+    }
+    return 0;
+}
+````
+**Output**
+```
+arr[0][0][0] = 1   arr[0][0][1] = 1
+arr[0][1][0] = 2   arr[0][1][1] = 3
+arr[0][2][0] = 4   arr[0][2][1] = 5
+arr[1][0][0] = 6   arr[1][0][1] = 7
+arr[1][1][0] = 8   arr[1][1][1] = 9
+arr[1][2][0] = 10   arr[1][2][1] = 11
+```
+**How 3D Arrays are Stored in the Memory?**
+Like 2D arrays, the elements of a 3D array should also be stored contiguously in memory.
+![3d-array-breakdown](assets/3d-array-breakdown-098f1f23fb.webp)
+3D Array
+Since computer memory is linear, a 3-D array is also stored in a linear form. It can be stored using row-major or column-major order with an additional depth dimension.
+- The array is stored layer by layer (one 2-D array at a time).
+- Within each layer, elements are stored according to the chosen row-major or column-major order.
+**Passing 3D Arrays to Functions**
+[**Passing a 3D array to a function**](https://www.geeksforgeeks.org/c/pass-a-3d-array-to-a-function-in-c/) in C is similar to passing 2D arrays, but with an additional dimension. When passing a 3D array, you need to pass the sizes of all the dimensions separately because the size information of array is lost while passing.
+---
+
+## Source
+
+[GeeksforGeeks](https://www.geeksforgeeks.org/multidimensional-arrays-in-c/)
+
+## GATE CS
+
+- Subject: Data Structures & C Programming
+- Topic: Arrays
+
+> [!note] Related notes
+>
+> - [[Introduction to Arrays]]
+> - [[CATEGORY ARCHIVES DATA STRUCTURES]]
+> - [[Data Types in C]]
+> - [[Double Hashing]]
+> - [[Enum, Struct & Union in C]]
+> - [[Functions in C]]
+> - [[I ntroduction to Trees]]
+> - [[Introduction to C Programming]]
+> - [[Introduction to Graphs]]
+> - [[Introduction to Hashing]]
